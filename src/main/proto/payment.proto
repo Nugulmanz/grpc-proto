@@ -11,7 +11,7 @@ message PaymentRequest {
 }
 
 message UserDetails {
-  string username = 1;
+  string userRole = 1;
   string email = 2;
   Address address = 3;
   repeated string largeStrings = 4; // 65350자 문자열 리스트 추가
