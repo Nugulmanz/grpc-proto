@@ -7,6 +7,21 @@ option java_outer_classname = "PaymentServiceProto";
 message PaymentRequest {
   int64 userId = 1;
   string orderId = 2;
+  UserDetails user = 3;
+}
+
+message UserDetails {
+  string username = 1;
+  string email = 2;
+  Address address = 3;
+  repeated string largeStrings = 4; // 65350자 문자열 리스트 추가
+}
+
+message Address {
+  string street = 1;
+  string city = 2;
+  string state = 3;
+  string zip = 4;
 }
 
 message PaymentResponse {
