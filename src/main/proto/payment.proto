@@ -8,7 +8,7 @@ message PaymentRequest {
   int64 userId = 1;
   string orderId = 2;
   UserDetails user = 3;
-  repeated Event event = 4;
+  repeated EventDetails event = 4;
 }
 
 message UserDetails {
@@ -24,7 +24,7 @@ message Address {
   string zip = 4;
 }
 
-message Event {
+message EventDetails {
   string eventId = 1;
   string title = 2;
   string category = 3;
